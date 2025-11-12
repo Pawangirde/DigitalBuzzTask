@@ -64,7 +64,7 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
 
       {/* Popup */}
       {show && (
-        <div className="flex-1 mt-3 sm:mt-6 bg-gray-900 border border-gray-700 shadow-2xl rounded-xl p-4 w-auto sm:w-90 z-50 text-white">
+        <div className="mt-3 sm:mt-6 bg-gray-900 border border-gray-700 shadow-2xl rounded-xl p-2 sm:w-120 text-white">
           {/* Header */}
           <div className="flex justify-between items-center mb-3">
             <button
