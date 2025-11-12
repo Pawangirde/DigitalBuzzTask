@@ -1,5 +1,5 @@
 import React from "react";
-import { MultiSelect } from "../components/multiselect";
+import { MultiSelect } from "../components/MultiSelectDropdown";
 
 export default function DropdownWidget() {
   // Simulated async loading function

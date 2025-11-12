@@ -1,5 +1,5 @@
 import React from "react";
-import CustomDateTimePicker from "../components/CustomDateTimePicker.jsx";
+import CustomDateTimePicker from "../components/ReUseDateTimePicker/CustomDateTimePicker.jsx";
 
 export default function DateTimeWidget() {
   const handleSet = (date) => {

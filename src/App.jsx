@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Layout.jsx";
+import Layout from "./layout/Layout.jsx";
 import DateTimeWidget from "./pages/DateTimeWidget.jsx";
 import ChartWidget from "./pages/ChartWidget.jsx";
 import DropdownWidget from "./pages/DropdownWidget.jsx";

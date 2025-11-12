@@ -1,5 +1,5 @@
 import React from "react";
-import MultiDocumentUpload from "../components/MultiDocumentUpload";
+import MultiDocumentUpload from "../components/ReUseMultiFileUploader/MultiDocumentUpload";
 
 export default function MultiUploadPage() {
   return (

@@ -22,6 +22,9 @@ const NotificationDemo = () => {
 
   return (
     <div className="flex flex-col  min-h-screen bg-gray-100 p-6">
+      <h1 className="text-2xl font-bold mb-4 text-gray-800">
+          Firebase Push Notification
+        </h1>
       <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
         <h1 className="text-2xl font-bold mb-4 text-gray-800">
           Firebase Push Notification Demo
