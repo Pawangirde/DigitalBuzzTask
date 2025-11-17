@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import MultiSelectOption from "./MultiselectOption.jsx";
 
 export default function MultiSelect({
-  // label = "Select Options",
   placeholder = "Select...",
-  loadOptions, // async function to fetch options
+  loadOptions, 
   onChange,
   defaultValue = [],
 }) {
@@ -14,14 +13,12 @@ export default function MultiSelect({
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Load options (async)
   useEffect(() => {
     if (loadOptions) {
       loadOptions().then(setOptions);
     }
   }, [loadOptions]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -57,14 +54,13 @@ export default function MultiSelect({
     <div className="w-full max-w-full sm:max-w-md relative" ref={dropdownRef}>
      
 
-      {/* Input Area */}
+    
       <div
         tabIndex={0}
         onClick={() => setOpen(!open)}
         onKeyDown={(e) => e.key === "Enter" && setOpen(!open)}
         className="border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2 flex flex-wrap gap-2 items-center cursor-text min-h-[44px] focus-within:ring-2 focus-within:ring-blue-500 "
       >
-        {/* Selected chips */}
         {selected.length > 0 ? (
           selected.map((item) => (
             <span
@@ -87,14 +83,11 @@ export default function MultiSelect({
           <span className="text-gray-400 text-sm truncate">{placeholder}</span>
         )}
 
-        {/* Dropdown Arrow */}
         <span className="ml-auto text-gray-500 text-xs sm:text-sm">▼</span>
       </div>
 
-      {/* Dropdown Menu */}
       {open && (
         <div className="absolute left-0 right-0 sm:w-full border border-gray-200 dark:border-gray-700 mt-1 rounded-md shadow-lg max-h-60 overflow-auto z-50 text-gray-800 ">
-          {/* Search Input */}
           <div className="p-2 border-b border-gray-100 dark:border-gray-700">
             <input
               type="text"
@@ -105,7 +98,6 @@ export default function MultiSelect({
             />
           </div>
 
-          {/* Options List */}
           <ul className="max-h-48 overflow-y-auto text-sm">
             {filteredOptions.length > 0 ? (
               filteredOptions.map((item) => (
@@ -123,7 +115,6 @@ export default function MultiSelect({
             )}
           </ul>
 
-          {/* Clear All */}
           {selected.length > 0 && (
             <div className="p-2 border-t border-gray-100 dark:border-gray-700 text-right">
               <button

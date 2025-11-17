@@ -2,7 +2,6 @@ import React from "react";
 import { MultiSelect } from "../components/MultiSelectDropdown";
 
 export default function DropdownWidget() {
-  // Simulated async loading function
   const loadPropertyTypes = async () => {
     return new Promise((resolve) => {
       setTimeout(() => {

@@ -54,7 +54,6 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
 
   return (
     <div className="relative inline-block w-full sm:w-auto">
-      {/* Trigger Button */}
       <button
         className="w-full sm:w-auto px-4 py-2 border rounded-md bg-white text-gray-700 hover:bg-gray-100"
         onClick={() => setShow(!show)}
@@ -62,10 +61,8 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
         {selected.format("MMM D, YYYY hh:mm A")}
       </button>
 
-      {/* Popup */}
       {show && (
         <div className="mt-3 sm:mt-6 bg-gray-900 border border-gray-700 shadow-2xl rounded-xl p-2 sm:w-120 text-white">
-          {/* Header */}
           <div className="flex justify-between items-center mb-3">
             <button
               onClick={() => setTemp(temp.subtract(1, "month"))}
@@ -83,7 +80,6 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
               &gt;
             </button>
           </div>
-          {/* Quick Ranges */}
           <div className="grid grid-cols-3 gap-2 mb-4 text-[10px] sm:text-xs">
             {[
               { label: "Today", key: "today" },
@@ -99,7 +95,6 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
               </button>
             ))}
           </div>
-          {/* Calendar Grid */}
           <div className="grid grid-cols-7 gap-1 text-center text-xs sm:text-sm mb-5 font-medium">
             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
               <div key={d} className="font-medium text-gray-400">
@@ -129,18 +124,16 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
               );
             })}
           </div>
-          {/* Time Picker */}
-          {/* Time Picker */}{" "}
+        
           <div className="flex items-center justify-center gap-4 mb-4">
-            {" "}
-            {/* Hours */}{" "}
+        
             <div className="flex flex-col items-center">
               {" "}
               <button
                 onClick={() => adjustTime("hour", "up")}
                 className="text-gray-300 hover:text-blue-400"
               >
-                {" "}
+               
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -183,7 +176,7 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
                 </svg>{" "}
               </button>{" "}
             </div>{" "}
-            <span className="text-2xl font-semibold">:</span> {/* Minutes */}{" "}
+            <span className="text-2xl font-semibold">:</span>
             <div className="flex flex-col items-center">
               {" "}
               <button
@@ -233,7 +226,7 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
                 </svg>{" "}
               </button>{" "}
             </div>{" "}
-            {/* AM/PM */}{" "}
+         
             <div className="ml-3">
               {" "}
               <button
@@ -245,7 +238,7 @@ export default function CustomDateTimePicker({ onSet, onCancel }) {
               </button>{" "}
             </div>{" "}
           </div>
-          {/* Action Buttons */}
+        
           <div className="grid grid-cols-2 gap-3 pt-3 text-white font-semibold">
             <button
               onClick={handleCancel}

@@ -61,10 +61,10 @@ export default function MultiDocumentUpload() {
         }}
         onDrop={handleDrop}
       >
-        {/* Title */}
+    
         <h2 className="text-lg font-semibold text-gray-800">Add Documents</h2>
 
-        {/* Document Title */}
+   
         <div>
           <label className="block text-sm font-medium mb-1 text-gray-600">
             Document Title
@@ -78,9 +78,9 @@ export default function MultiDocumentUpload() {
           />
         </div>
 
-        {/* Upload Controls */}
+
         <div className="flex flex-col sm:flex-row items-center gap-3 bg-emerald-50 p-4 rounded-xl">
-          {/* Browse Button */}
+        
           <button
             type="button"
             onClick={() => fileInputRef.current.click()}
@@ -100,7 +100,6 @@ export default function MultiDocumentUpload() {
 
           <span className="text-gray-500 font-medium text-sm">OR</span>
 
-          {/* Drag & Drop */}
           <div
             className={`flex-1 border-2 border-dashed rounded-full px-4 py-3 text-center text-sm font-medium transition-all ${
               dragActive
@@ -112,7 +111,6 @@ export default function MultiDocumentUpload() {
           </div>
         </div>
 
-        {/* Buttons */}
         <div className="flex justify-end gap-3 pt-4">
           <button
             type="button"
@@ -132,7 +130,6 @@ export default function MultiDocumentUpload() {
           </button>
         </div>
 
-        {/* Uploaded Files */}
         {files.length > 0 && (
           <div className="mt-4">
             <h3 className="text-sm font-semibold text-gray-700 mb-2">

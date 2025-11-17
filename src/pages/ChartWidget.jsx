@@ -14,7 +14,7 @@ import {
   YAxis,
   CartesianGrid,
 } from "recharts";
-import { CalendarDays, BarChart3 } from "lucide-react"; // 📦 Icons
+import { CalendarDays, BarChart3 } from "lucide-react"; 
 
 const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6"];
 
@@ -40,7 +40,6 @@ export default function ChartWidget() {
     );
   }, [startDate, endDate]);
 
-  // Custom tooltip
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
@@ -59,7 +58,6 @@ export default function ChartWidget() {
     return null;
   };
 
-  // Chart renderer
   const renderChart = () => {
     switch (chartType) {
       case "Line":
