@@ -50,8 +50,8 @@ const NotificationDemo = () => {
 
         {token && (
           <div className="mt-4 text-sm break-all text-gray-500">
-            <strong>Your FCM Token:</strong>
-            <p className="mt-2">{token}</p>
+            {/* <strong>Your FCM Token:</strong>
+            <p className="mt-2">{token}</p> */}
           </div>
         )}
       </div>

@@ -25,7 +25,7 @@ export const requestPermission = async () => {
 
   if (permission === "granted") {
     console.log("Notification permission granted.");
-    const token = await getToken(messaging, {
+    const token =await getToken(messaging, {
       vapidKey:
         "BBtnkluAxYNsG0Q9vriUp2c8y5exrq9nvscD7gMOdnC1Yp246MNM60O5FAAZi-T5NBWwj5TsKnpUbculos-sYO0",
     });
